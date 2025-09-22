@@ -1,4 +1,0 @@
----
-  title: Libros
-  draft: false
----
