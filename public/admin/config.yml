@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/img/uploads"
+public_folder: "/img/uploads"
+
+site_url: "https://encavernados.com"
+logo_url: "/img/uploads/logo.png"
+
+collections:
+  - name: "articulos"
+    label: "Artículos"
+    folder: "content/articulos"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"   # deja el body en Markdown
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Autor", name: "authors", widget: "select", multiple: true, options: ["Carlos", "Sebastián", "María", "Nieves", "Natalia", "Invitado"] }
+      - {label: "Descripción (resumen)", name: "description", widget: "text", hint: "Máx. ~160 caracteres"}
+      - {label: "Portada (cualquier formato)", name: "cover", widget: "image", allow_multiple: false}
+      - {label: "Categoría", name: "categories", widget: "select", multiple: true, options: ["articulos","entrevistas"], default: ["articulos"]}
+      - {label: "YouTube (solo si es entrevista)", name: "youtube", widget: "string", required: false, hint: "Pega SOLO el ID, ej: dQw4w9WgXcQ"}
+      - {label: "Contenido", name: "body", widget: "markdown"}

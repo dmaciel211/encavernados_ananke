@@ -1,0 +1,54 @@
+baseURL = "https://encavernados.com/"
+languageCode = "es"
+theme = "ananke"
+resourceDir = "../resources"
+title= "Encavernados"
+
+# Paginación global (Home/List/Section). Si querés 10 en artículos: listo más abajo.
+pagination.pagerSize = 3
+
+[menus]
+  [[menus.main]]
+    name = "Artículos"
+    pageRef = "articulos"
+    weight = 10
+  [[menus.main]]
+    name = "Libros"
+    pageRef = "libros"
+    weight = 20
+  [[menus.main]]
+    name = "Sobre nosotros"
+    pageRef = "sobre"
+    weight = 30
+  [[menus.main]]
+    name = "Consultas"
+    pageRef = "consultas"
+    weight = 40
+
+
+
+DefaultContentLanguage = "es"
+SectionPagesMenu = "articulos"
+Paginate = 10                  # this is set low for demonstrating with dummy content. Set to a higher number
+googleAnalytics = ""
+enableRobotsTXT = true
+
+
+[sitemap]
+changefreq = "monthly"
+priority = 0.5
+filename = "sitemap.xml"
+
+[params]
+text_color = "#000000"
+author = ""
+favicon = ""
+site_logo = ""
+description = "Un grupo de filosfía"
+# choose a background color from any on this page: https://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+background_color_class = "bg-lightest-blue"
+recent_posts_number = 3
+
+[[params.ananke_socials]]
+name = "twitter"
+url = "https://twitter.com/GoHugoIO"
